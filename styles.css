@@ -383,23 +383,85 @@ h3 {
 }
 
 @media (max-width: 560px) {
+  .site-header {
+    padding: calc(12px + env(safe-area-inset-top)) 16px 10px;
+  }
+
   .brand span:last-child {
     display: none;
   }
 
-  .call-link,
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .call-link {
+    width: auto;
+    min-height: 44px;
+    padding: 0 22px;
+  }
+
   .primary-button,
   .secondary-button {
     width: 100%;
     min-height: 48px;
+    padding: 0 18px;
+    font-size: 0.95rem;
   }
 
-  .site-header .call-link {
-    width: auto;
+  .hero {
+    min-height: 100svh;
+    padding: 96px 20px 48px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(3.05rem, 16vw, 4.5rem);
+    line-height: 1.03;
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 3.05rem);
+  }
+
+  .hero-copy {
+    margin-bottom: 22px;
+    font-size: 1.06rem;
+  }
+
+  .intro-section,
+  .story-panel,
+  .host-section,
+  .contact-section {
+    padding: 54px 20px;
+  }
+
+  .feature-card {
+    padding: 30px 22px;
   }
 
   .hero-actions,
   .contact-actions {
     align-items: stretch;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 2.85rem;
+  }
+
+  .hero {
+    padding-inline: 18px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    font-size: 0.9rem;
   }
 }
